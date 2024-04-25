@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:NRFTW_EasyWorldBacup"
         mc:Ignorable="d"
         Title="No Rest For The Wicked - Easy World Backup" Height="450" Width="800" Loaded="Window_Loaded"
-        WindowStartupLocation="CenterScreen">
+        WindowStartupLocation="CenterScreen" Icon="/Resources/Player.png">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="200" />
@@ -28,47 +28,54 @@
 
         </Grid>
 
-        <Grid Grid.Column="1">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="35" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="60" />
-            </Grid.RowDefinitions>
+        <Border Grid.Column="1" BorderThickness="0" BorderBrush="Black">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="35" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="60" />
+                </Grid.RowDefinitions>
 
-            <Button Grid.Row="0" Content="백업 생성" Width="100" Height="25" HorizontalAlignment="Right" Click="MakeClone_Click" />
-            <DataGrid Grid.Row="1" x:Name="list" ItemsSource="{Binding clones}" AutoGenerateColumns="False" CanUserAddRows="False"
+                <Button Grid.Row="0" Content="백업 생성" Width="100" Height="25" HorizontalAlignment="Right" Click="MakeClone_Click" />
+                <DataGrid Grid.Row="1" x:Name="list" ItemsSource="{Binding clones}" AutoGenerateColumns="False" CanUserAddRows="False"
                       HeadersVisibility="Column"
                       CellEditEnding="list_CellEditEnding"
                       MouseDoubleClick="list_MouseDoubleClick"
                       SelectionChanged="list_SelectionChanged"
                       >
-                <DataGrid.Columns>
-                    <DataGridTextColumn Header="Name" Binding="{Binding Name}" IsReadOnly="False" Width="80" CanUserSort="False"/>
-                    <DataGridTextColumn Header="Path" Binding="{Binding Path}" IsReadOnly="True" Width="*" CanUserSort="False"/>
-                    <!--<DataGridTemplateColumn Header="" Width="100">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Name" Binding="{Binding Name}" IsReadOnly="False" Width="80" CanUserSort="False"/>
+                        <DataGridTextColumn Header="Path" Binding="{Binding Path}" IsReadOnly="True" Width="*" CanUserSort="False"/>
+                        <!--<DataGridTemplateColumn Header="" Width="100">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <Button Content="Backup" Click="Button_Click"/>
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>-->
-                </DataGrid.Columns>
-            </DataGrid>            
-            <Grid Grid.Row="2">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="20" />
-                    <RowDefinition Height="40" />
-                </Grid.RowDefinitions>
+                    </DataGrid.Columns>
+                </DataGrid>
 
-                <TextBlock Grid.Row="0" Text="백업 복원 전 플레이한 세계" VerticalAlignment="Center" Margin="5, 5, 0, 0" />
-                <ListBox Grid.Row="1" x:Name="lbAutoBackup" 
+                <Border Grid.Row="2" BorderThickness="1" BorderBrush="LightGray">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="20" />
+                            <RowDefinition Height="40" />
+                        </Grid.RowDefinitions>
+
+                        <TextBlock Grid.Row="0" Text="백업 복원 전 플레이한 세계" VerticalAlignment="Center" Margin="5, 5, 0, 0" />
+                        <ListBox Grid.Row="1" x:Name="lbAutoBackup" 
                          ScrollViewer.HorizontalScrollBarVisibility="Disabled" 
                          ScrollViewer.VerticalScrollBarVisibility="Disabled" 
                          BorderThickness="0" 
                          PreviewMouseLeftButtonUp="lbAutoBackup_PreviewMouseLeftButtonUp" 
                          MouseDoubleClick="lbAutoBackup_MouseDoubleClick"/>
+                    </Grid>
+                </Border>
+                
             </Grid>
-        </Grid>
+        </Border>
+        
 
         <Grid Grid.Column="2">
             <Grid.RowDefinitions>
