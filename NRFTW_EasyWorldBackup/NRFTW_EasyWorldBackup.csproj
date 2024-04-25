@@ -19,7 +19,6 @@
 
   <ItemGroup>
     <Resource Include="Resources\player.png" />
-    <Resource Include="Resources\유튜브_프사.png" />
   </ItemGroup>
 
   <ItemGroup>
