@@ -65,7 +65,7 @@
                          ScrollViewer.HorizontalScrollBarVisibility="Disabled" 
                          ScrollViewer.VerticalScrollBarVisibility="Disabled" 
                          BorderThickness="0" 
-                         PreviewMouseLeftButtonDown="lbAutoBackup_PreviewMouseLeftButtonDown" 
+                         PreviewMouseLeftButtonUp="lbAutoBackup_PreviewMouseLeftButtonUp" 
                          MouseDoubleClick="lbAutoBackup_MouseDoubleClick"/>
             </Grid>
         </Grid>

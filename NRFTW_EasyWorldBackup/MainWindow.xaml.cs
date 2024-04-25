@@ -311,11 +311,6 @@ namespace NRFTW_EasyWorldBacup
          }
       }
 
-      private void lbAutoBackup_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-      {
-         ShowWorldInfo(lbAutoBackup.SelectedItem.ToString());
-      }
-
       private void lbAutoBackup_MouseDoubleClick(object sender, MouseButtonEventArgs e)
       {
          var res = MessageBox.Show("선택한 백업으로 세계를 변경 하시겠습니까?\r\n*게임이 종료 됐거나 메인 메뉴에 있을 때 진행해 주세요", "백업 복원", MessageBoxButton.OKCancel);
@@ -401,6 +396,11 @@ namespace NRFTW_EasyWorldBacup
          {
             MessageBox.Show("삭제에 실패 했습니다.");
          }
+      }
+
+      private void lbAutoBackup_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+      {
+         ShowWorldInfo(lbAutoBackup.SelectedItem.ToString());
       }
    }
 }
