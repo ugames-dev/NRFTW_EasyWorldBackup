@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32901.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NRFTW_EasyWorldBackup", "NRFTW_EasyWorldBackup\NRFTW_EasyWorldBackup.csproj", "{E04F93B5-EC72-4B86-80D8-3854D216899D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E04F93B5-EC72-4B86-80D8-3854D216899D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E04F93B5-EC72-4B86-80D8-3854D216899D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E04F93B5-EC72-4B86-80D8-3854D216899D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E04F93B5-EC72-4B86-80D8-3854D216899D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {569DB01C-CFEA-424E-A596-34D771023A50}
+	EndGlobalSection
+EndGlobal
